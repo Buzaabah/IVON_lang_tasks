@@ -22,7 +22,7 @@ from rich.console import Console
 # define a rich console logger
 console = Console(record=True)
 
-df = pd.read_csv("https://raw.githubusercontent.com/Shivanandroy/T5-Finetuning-PyTorch/main/data/news_summary.csv")
+df = pd.read_csv("../data/news_summary.csv")
 
 print(f'data_sample: {df.sample(10)}')
 
