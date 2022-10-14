@@ -237,9 +237,9 @@ def validate(epoch, tokenizer, model, device, loader):
         print("epoch | test loss | test Acc | Test F1 ")
         print(f"{epoch + 1:5d} | {avg_test_loss:.5f} | {avg_test_acc:.5f} | {avg_test_f1:.5f}")
 
-        global df2
+        global new_df
         temp_data = pd.DataFrame({'predicted': predictions, 'actual': actuals})
-        df2 = df2.append(temp_data)
+        new_df = new_df.append(temp_data)
 
     return test_stats
 
