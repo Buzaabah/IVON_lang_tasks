@@ -144,7 +144,6 @@ def train(epoch, tokenizer, model, device, loader, optimizer):
 
     avg_train_loss = train_total_loss / len(loader)
 
-
     training_stats.append(
         {
             'Train Loss': avg_train_loss
@@ -161,6 +160,9 @@ def train(epoch, tokenizer, model, device, loader, optimizer):
     print(f"{epoch + 1:5d} | {avg_train_loss:.5f} | {training_time:}")
 
     return training_stats
+
+
+new_df = 0
 
 
 def validate(epoch, tokenizer, model, device, loader):
