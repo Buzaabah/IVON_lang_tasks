@@ -162,7 +162,7 @@ def train(epoch, tokenizer, model, device, loader, optimizer):
     return training_stats
 
 
-new_df = 0
+#new_df = 0
 
 
 def validate(epoch, tokenizer, model, device, loader):
