@@ -48,8 +48,8 @@ from jax.experimental import multihost_utils
 from jax.experimental.gda_serialization import serialization as gda_serialization
 import jax.numpy as jnp
 import numpy as np
-# import orbax.checkpoint
-# from t5x 
+import orbax.checkpoint
+# from t5x
 import checkpoint_importer
 from t5x import checkpoint_utils
 from t5x import optimizers
