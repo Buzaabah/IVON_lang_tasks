@@ -45,8 +45,10 @@ import gin
 import jax
 import seqio
 
-from t5x import gin_utils
-from t5x import utils
+#from t5x\
+import gin_utils
+#from t5x\
+import utils
 
 
 @enum.unique

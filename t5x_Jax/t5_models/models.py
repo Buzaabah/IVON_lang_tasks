@@ -33,10 +33,14 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import seqio
-from t5x import decoding
-from t5x import losses
-from t5x import metrics as metrics_lib
-from t5x import optimizers
+#from t5x\
+import decoding
+#from t5x\
+import losses
+#from t5x \
+import metrics as metrics_lib
+#from t5x\
+import optimizers
 import tensorflow as tf
 import typing_extensions
 
