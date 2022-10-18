@@ -162,7 +162,6 @@ def train(epoch, tokenizer, model, device, loader, optimizer):
     return training_stats
 
 
-#new_df = 0
 
 
 def validate(epoch, tokenizer, model, device, loader):
@@ -179,6 +178,7 @@ def validate(epoch, tokenizer, model, device, loader):
     total_test_f1 = 0
     predictions = []
     actuals = []
+    new_df = []
     with torch.no_grad():
         for _, data in enumerate(loader, 0):
             y = data['target_ids'].to(device, dtype=torch.long)
