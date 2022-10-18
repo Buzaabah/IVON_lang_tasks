@@ -217,9 +217,9 @@ def validate(epoch, tokenizer, model, device, loader):
             predictions.extend(preds)
             actuals.extend(target)
 
-            global new_df
-            temp_data = pd.DataFrame({'predicted': predictions, 'actual': actuals})
-            new_df = new_df.append(temp_data)
+            #global new_df
+            #temp_data = pd.DataFrame({'predicted': predictions, 'actual': actuals})
+            #new_df = new_df.append(temp_data)
 
         # calculate the average loss over all of the batches.
         avg_test_loss = total_test_loss / len(loader)
