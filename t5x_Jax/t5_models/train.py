@@ -656,7 +656,8 @@ if __name__ == '__main__':
     from absl import app
     from absl import flags
     import gin
-    from t5x import gin_utils
+    #from t5x\
+    import gin_utils
 
     # pylint: enable=g-import-not-at-top
 
