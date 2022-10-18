@@ -53,4 +53,4 @@ python3 train.py \
   --gin.MODEL_DIR=\"${MODEL_DIR}\" \
   --tfds_data_dir=${TFDS_DATA_DIR}
 
-IVON_lang_tasks/t5x_Jax/t5_models/examples/t5/
+#IVON_lang_tasks/t5x_Jax/t5_models/examples/t5/
