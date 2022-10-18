@@ -32,7 +32,8 @@ from jax.experimental.maps import Mesh
 from jax.experimental.mesh_utils import create_hybrid_device_mesh
 from jax.experimental.pjit import pjit as jax_pjit
 import numpy as np
-from t5x import train_state as train_state_lib
+#from t5x \
+import train_state as train_state_lib
 
 JaxDevice = jax.lib.xla_client.Device
 TpuMesh = Tuple[int, int, int, int]  # (x, y, z, num_cores).
