@@ -19,7 +19,8 @@ from absl.testing import parameterized
 import jax
 import jax.numpy as jnp
 import numpy as np
-from t5x import metrics
+#from t5x\
+import metrics
 
 
 class MetricsTest(parameterized.TestCase):

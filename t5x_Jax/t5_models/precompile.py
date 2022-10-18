@@ -34,10 +34,14 @@ import jax
 from jax import random
 import numpy as np
 import t5.data.mixtures  # pylint:disable=unused-import
-from t5x import models
-from t5x import partitioning
-from t5x import trainer as trainer_lib
-from t5x import utils
+#from t5x
+import models
+#from t5x
+import partitioning
+#from t5x
+import trainer as trainer_lib
+#from t5x
+import utils
 import tensorflow as tf
 
 

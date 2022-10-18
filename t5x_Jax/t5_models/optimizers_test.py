@@ -28,12 +28,18 @@ import jax.numpy as jnp
 import numpy as np
 import optax
 import seqio
-from t5x import models
-from t5x import optimizers
-from t5x import partitioning
-from t5x import test_utils
-from t5x import trainer
-from t5x import utils
+#from t5x
+import models
+#from t5x
+import optimizers
+#from t5x
+import partitioning
+#from t5x
+import test_utils
+#from t5x
+import trainer
+#from t5x
+import utils
 from t5x.examples.t5 import network
 
 

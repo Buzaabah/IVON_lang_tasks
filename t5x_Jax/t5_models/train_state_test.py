@@ -19,10 +19,14 @@ import flax.core
 from flax.linen import partitioning as flax_partitioning
 import jax
 import numpy as np
-from t5x import adafactor
-from t5x import optimizers
-from t5x import partitioning
-from t5x import train_state as train_state_lib
+#from t5x
+import adafactor
+#from t5x
+import optimizers
+#from t5x
+import partitioning
+#from t5x
+import train_state as train_state_lib
 
 mock = absltest.mock
 AxisMetadata = flax_partitioning.AxisMetadata

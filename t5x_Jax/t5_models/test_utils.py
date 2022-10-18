@@ -26,9 +26,12 @@ from jax.experimental.global_device_array import GlobalDeviceArray
 from jax.experimental.maps import Mesh
 import numpy as np
 import seqio
-from t5x import adafactor
-from t5x import models
-from t5x import train_state as train_state_lib
+#from t5x
+import adafactor
+#from t5x
+import models
+#from t5x
+import train_state as train_state_lib
 from t5x.checkpoint_importer import LazyArray
 from t5x.examples.t5 import network
 import tensorflow.compat.v2 as tf

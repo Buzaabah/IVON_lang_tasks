@@ -21,7 +21,8 @@ from absl import flags
 from absl.testing import absltest
 import jax
 import numpy as np
-from t5x import checkpoint_importer
+#from t5x\
+import checkpoint_importer
 import tensorflow as tf
 
 

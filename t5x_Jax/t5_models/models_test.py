@@ -26,12 +26,18 @@ import jax
 import jax.numpy as jnp
 import numpy as np
 import t5.data.tasks  # pylint:disable=unused-import
-from t5x import decoding
-from t5x import models
-from t5x import partitioning
-from t5x import test_utils
-from t5x import trainer as trainer_lib
-from t5x import utils
+#from t5x\
+import decoding
+#from t5x
+import models
+#from t5x
+import partitioning
+#from t5x
+import test_utils
+#from t5x
+import trainer as trainer_lib
+#from t5x
+import utils
 import tensorflow as tf
 
 # Parse absl flags test_srcdir and test_tmpdir.

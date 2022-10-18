@@ -41,10 +41,14 @@ from jax.experimental import multihost_utils
 import jax.numpy as jnp
 import numpy as np
 import seqio
-from t5x import gin_utils
-from t5x import models
-from t5x import partitioning
-from t5x import utils
+#from t5x
+import gin_utils
+#from t5x
+import models
+#from t5x
+import partitioning
+#from t5x
+import utils
 import tensorflow as tf
 from tensorflow.io import gfile
 from typing_extensions import Protocol

@@ -32,10 +32,14 @@ from clu import metric_writers
 import jax
 from jax.experimental import multihost_utils
 import seqio
-from t5x import gin_utils
-from t5x import models
-from t5x import partitioning
-from t5x import utils
+#from t5x\
+import gin_utils
+#from t5x
+import models
+#from t5x
+import partitioning
+#from t5x
+import utils
 from typing_extensions import Protocol
 
 # Automatically search for gin files relative to the T5X package.

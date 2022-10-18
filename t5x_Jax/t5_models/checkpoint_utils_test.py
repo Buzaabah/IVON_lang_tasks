@@ -18,7 +18,8 @@ import os
 import traceback
 
 from absl.testing import absltest
-from t5x import checkpoint_utils
+#from t5x\
+import checkpoint_utils
 from tensorflow.io import gfile
 
 TESTDATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "testdata")

@@ -60,9 +60,13 @@ from flax.traverse_util import unflatten_dict
 import jax
 import jax.numpy as jnp
 import numpy as np
-from t5x import utils
-from t5x.optimizers import OptimizerDef
-from t5x.optimizers import OptimizerState
+#from t5x\
+import utils
+#from t5x.optimizers import OptimizerDef
+from optimizers import OptimizerDef
+#from t5x.optimizers import OptimizerState
+from optimizers import OptimizerState
+
 
 Dtype = Any
 

@@ -28,13 +28,20 @@ import jax
 from jax._src import dispatch as jax_dispatch
 import jax.numpy as jnp
 import numpy as np
-from t5x import metrics as metrics_lib
-from t5x import models as models_lib
-from t5x import optimizers
-from t5x import partitioning
-from t5x import test_utils
-from t5x import train_state as train_state_lib
-from t5x import trainer as trainer_lib
+#from t5x
+import metrics as metrics_lib
+#from t5x
+import models as models_lib
+#from t5x
+import optimizers
+#from t5x
+import partitioning
+#from t5x
+import test_utils
+#from t5x
+import train_state as train_state_lib
+#from t5x
+import trainer as trainer_lib
 import tensorflow as tf
 from tensorflow.io import gfile
 

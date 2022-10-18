@@ -27,11 +27,16 @@ from flax.linen import partitioning as flax_partitioning
 import jax
 import numpy as np
 import seqio
-from t5x import checkpoints
-from t5x import partitioning
-from t5x import test_utils
-from t5x import train_state as train_state_lib
-from t5x import utils
+#from t5x
+import checkpoints
+#from t5x
+import partitioning
+#from t5x
+import test_utils
+#from t5x
+import train_state as train_state_lib
+#from t5x
+import utils
 import tensorflow as tf
 
 mock = absltest.mock

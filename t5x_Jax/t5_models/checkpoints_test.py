@@ -30,13 +30,20 @@ import jax
 from jax._src.lib import xla_bridge
 import jax.numpy as jnp
 import numpy as np
-from t5x import checkpoints
-from t5x import optimizers
-from t5x import partitioning
-from t5x import state_utils
-from t5x import test_utils
-from t5x import train_state as train_state_lib
-from t5x import utils
+#from t5x\
+import checkpoints
+#from t5x
+import optimizers
+#from t5x\
+import partitioning
+#from t5
+import state_utils
+#from t5x
+import test_utils
+#from t5x
+import train_state as train_state_lib
+#from t5x
+import utils
 import tensorflow as tf
 from tensorflow.io import gfile
 import tensorstore as ts

@@ -28,8 +28,10 @@ from jax import numpy as jnp
 from jax import random
 import numpy as np
 
-from t5x import adafactor
-from t5x import optimizers
+#from t5x\
+import adafactor
+#from t5x\
+import optimizers
 
 OptimizerState = optimizers.OptimizerState
 

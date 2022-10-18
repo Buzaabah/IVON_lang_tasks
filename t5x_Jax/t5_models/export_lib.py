@@ -30,10 +30,14 @@ from jax.experimental.global_device_array import GlobalDeviceArray as GDA
 import jax.numpy as jnp
 import ml_collections
 import seqio
-from t5x import checkpoints
-from t5x import models
-from t5x import partitioning
-from t5x import utils
+#from t5x\
+import checkpoints
+#from t5x\
+import models
+#from t5x\
+import partitioning
+#from t5x\
+import utils
 import tensorflow as tf  # type: ignore
 import typing_extensions
 

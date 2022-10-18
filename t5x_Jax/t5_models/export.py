@@ -26,7 +26,8 @@ from absl import logging
 os.environ.setdefault('FLAX_PROFILE', 'true')
 
 import jax
-from t5x import export_lib
+#from t5x\
+import export_lib
 
 if __name__ == '__main__':
   # pylint:disable=g-import-not-at-top

@@ -24,7 +24,8 @@ from jax import random
 import jax.numpy as jnp
 import numpy as np
 
-from t5x import binary_search
+#from t5x\
+import binary_search
 
 PyTreeDef = type(jax.tree_util.tree_structure(None))
 

@@ -18,7 +18,8 @@ from absl.testing import absltest
 import jax
 import jax.numpy as jnp
 import numpy as np
-from t5x import losses
+#from t5x\
+import losses
 
 
 class LossTest(absltest.TestCase):

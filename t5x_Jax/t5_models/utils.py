@@ -43,11 +43,16 @@ import jax.numpy as jnp
 import numpy as np
 import orbax.checkpoint
 import seqio
-from t5x import checkpoints
-from t5x import optimizers
-from t5x import partitioning
-from t5x import state_utils
-from t5x import train_state as train_state_lib
+#from t5x
+import checkpoints
+#from t5x
+import optimizers
+#from t5x
+import partitioning
+#from t5x
+import state_utils
+#from t5x
+import train_state as train_state_lib
 import tensorflow as tf
 from tensorflow.io import gfile
 import typing_extensions

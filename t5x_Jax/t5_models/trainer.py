@@ -38,11 +38,16 @@ import jax.lax
 import jax.numpy as jnp
 import jax.random
 import numpy as np
-from t5x import metrics as metrics_lib
-from t5x import models
-from t5x import partitioning
-from t5x import train_state as train_state_lib
-from t5x import utils
+#from t5x\
+import metrics as metrics_lib
+#from t5x
+import models
+#from t5x
+import partitioning
+#from t5x
+import train_state as train_state_lib
+#from t5x
+import utils
 import typing_extensions
 
 

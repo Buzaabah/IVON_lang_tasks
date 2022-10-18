@@ -15,7 +15,8 @@
 """Tests for gin_utils."""
 
 from absl.testing import absltest
-from t5x import gin_utils
+#from t5x\
+import gin_utils
 
 
 class GinUtilsTest(absltest.TestCase):

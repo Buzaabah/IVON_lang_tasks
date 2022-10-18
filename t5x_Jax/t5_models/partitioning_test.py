@@ -23,11 +23,16 @@ from flax.linen import partitioning as nn_partitioning
 import jax
 from jax._src.lib import xla_bridge
 import numpy as np
-from t5x import adafactor
-from t5x import optimizers
-from t5x import partitioning
-from t5x import test_utils as ptu
-from t5x import train_state
+#from t5x\
+import adafactor
+#from t5x\
+import optimizers
+#from t5x
+import partitioning
+#from t5x
+import test_utils as ptu
+#from t5x
+import train_state
 
 jax.config.parse_flags_with_absl()
 
