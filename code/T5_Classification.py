@@ -178,7 +178,7 @@ def validate(epoch, tokenizer, model, device, loader):
     total_test_f1 = 0
     predictions = []
     actuals = []
-    new_df = []
+    #new_df = []
     with torch.no_grad():
         for _, data in enumerate(loader, 0):
             y = data['target_ids'].to(device, dtype=torch.long)
@@ -217,6 +217,10 @@ def validate(epoch, tokenizer, model, device, loader):
             predictions.extend(preds)
             actuals.extend(target)
 
+            global new_df
+            temp_data = pd.DataFrame({'predicted': predictions, 'actual': actuals})
+            new_df = new_df.append(temp_data)
+
         # calculate the average loss over all of the batches.
         avg_test_loss = total_test_loss / len(loader)
 
@@ -238,10 +242,6 @@ def validate(epoch, tokenizer, model, device, loader):
         print("summary results")
         print("epoch | test loss | test Acc | Test F1 ")
         print(f"{epoch + 1:5d} | {avg_test_loss:.5f} | {avg_test_acc:.5f} | {avg_test_f1:.5f}")
-
-        global new_df
-        temp_data = pd.DataFrame({'predicted': predictions, 'actual': actuals})
-        new_df = new_df.append(temp_data)
 
     return test_stats
 
