@@ -39,18 +39,17 @@ import jax.numpy as jnp
 import numpy as np
 import seqio
 # from t5x import checkpoints
-# from t5_models
 import checkpoints
 # from t5x import models
-from t5_models import models
+import models
 # from t5x import partitioning
-from t5_models import partitioning
+import partitioning
 # from t5x import train_state as train_state_lib
-from t5_models import train_state as train_state_lib
+import train_state as train_state_lib
 # from t5x import trainer as trainer_lib
-from t5_models import trainer as trainer_lib
+import trainer as trainer_lib
 # from t5x import utils
-from t5_models import utils
+import utils
 import tensorflow as tf
 
 # Automatically search for gin files relative to the T5X package.
