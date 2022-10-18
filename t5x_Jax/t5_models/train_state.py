@@ -23,7 +23,8 @@ from flax.linen import partitioning as flax_partitioning
 import flax.serialization
 import flax.struct
 import jax.numpy as jnp
-from t5x import optimizers
+#from t5x \
+import optimizers
 
 import typing_extensions
 
