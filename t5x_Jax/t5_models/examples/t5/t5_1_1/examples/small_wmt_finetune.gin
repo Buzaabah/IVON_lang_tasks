@@ -6,8 +6,10 @@ from t5.data import mixtures
 import models
 #from t5_models import models
 
-from t5x import partitioning
-from t5x import utils
+#from t5x
+import partitioning
+#from t5x
+import utils
 
 include "t5x/examples/t5/t5_1_1/small.gin"
 include "t5x/configs/runs/finetune.gin"
