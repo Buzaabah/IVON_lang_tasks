@@ -135,7 +135,7 @@ TaskRegistry.add(
 
 # =================================== GLUE =====================================
 # for b in tfds.text.glue.Glue.builder_configs.values():
-for b in tfds.deprecated.text.glue.Glue.builder_configs.values():
+for b in tfds.text.glue.Glue.builder_configs.values():
     TaskRegistry.add(
         "glue_%s_v002" % b.name,
         source=seqio.TfdsDataSource(
