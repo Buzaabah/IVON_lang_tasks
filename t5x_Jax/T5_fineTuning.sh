@@ -49,8 +49,8 @@ T5X_DIR="..."  # directory where the T5X repo is cloned.
 cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/t5x_Jax/t5_models
 python3 train.py \
   --gin_file="t5_models/examples/t5/t5_1_1/examples/small_wmt_finetune.gin" \
-  #--gin_file="t5x/examples/t5/t5_1_1/examples/base_wmt_finetune.gin" \
   --gin.MODEL_DIR=\"${MODEL_DIR}\" \
   --tfds_data_dir=${TFDS_DATA_DIR}
 
+#--gin_file="t5x/examples/t5/t5_1_1/examples/base_wmt_finetune.gin" \
 #IVON_lang_tasks/t5x_Jax/t5_models/examples/t5/
