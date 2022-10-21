@@ -48,4 +48,4 @@ python3 run_flax_glue.py \
   --per_device_train_batch_size 4 \
   --eval_steps 100 \
   --output_dir ./$TASK_NAME/ \
-  --push_to_hub
+  #--push_to_hub
