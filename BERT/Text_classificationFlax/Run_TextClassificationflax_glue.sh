@@ -36,7 +36,7 @@ proxy_gpu
 source $HOME/miniconda3/bin/activate base
 
 
-export TASK_NAME=mrpc
+export TASK_NAME=cola
 
 cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/BERT/Text_classificationFlax
 python3 run_flax_glue.py \
