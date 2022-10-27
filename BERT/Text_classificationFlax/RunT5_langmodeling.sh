@@ -36,16 +36,22 @@ proxy_gpu
 source $HOME/miniconda3/bin/activate Jax_env
 
 
-export TASK_NAME=stsb
-
-cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/BERT/Text_classificationFlax
-python run_flax_glue.py \
-  --model_name_or_path bert-base-cased \
-  --task_name ${TASK_NAME} \
-  --max_seq_length 128 \
-  --learning_rate 1e-5 \
-  --num_train_epochs 10 \
-  --per_device_train_batch_size 4 \
-  --eval_steps 100 \
-  --output_dir ./$TASK_NAME/ \
-  #--push_to_hub
+python run_t5_mlm_flax.py \
+	--output_dir="./norwegian-t5-base" \
+	--model_type="t5" \
+	--config_name="./norwegian-t5-base" \
+	--tokenizer_name="./norwegian-t5-base" \
+	--dataset_name="oscar" \
+	--dataset_config_name="unshuffled_deduplicated_no" \
+	--max_seq_length="512" \
+	--per_device_train_batch_size="32" \
+	--per_device_eval_batch_size="32" \
+	--adafactor \
+	--learning_rate="0.005" \
+	--weight_decay="0.001" \
+	--warmup_steps="2000" \
+	--overwrite_output_dir \
+	--logging_steps="500" \
+	--save_steps="10000" \
+	--eval_steps="2500" \
+	#--push_to_hub
