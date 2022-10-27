@@ -33,7 +33,7 @@ proxy_clear
 proxy_gpu
 
 ### commented out: -pe OpenMP 28
-source $HOME/miniconda3/bin/activate base
+source $HOME/miniconda3/bin/activate Jax_env
 
 
 export TASK_NAME=mnli
