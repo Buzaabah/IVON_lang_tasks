@@ -52,7 +52,7 @@ from transformers import (
 from transformers.utils import check_min_version, get_full_repo_name, send_example_telemetry
 
 #os.environ['TF_ENABLE_ONEDNN_OPTS']='0'
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 logger = logging.getLogger(__name__)
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.24.0.dev0")
