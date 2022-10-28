@@ -35,6 +35,7 @@ proxy_gpu
 ### commented out: -pe OpenMP 28
 source $HOME/miniconda3/bin/activate Jax_env
 
+cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/BERT/Text_classificationFlax
 
 python run_t5_mlm_flax.py \
 	--output_dir="./norwegian-t5-base" \
