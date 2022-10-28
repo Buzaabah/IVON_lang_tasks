@@ -427,12 +427,12 @@ def main():
             "weight_decay": 0.0,
         },
     ]
-    optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
-    # optimizer = IVON(
-    #    optimizer_grouped_parameters, lr=args.learning_rate, data_size=len(train_dataset), mc_samples=args.mc_samples,
-    #    momentum_grad=args.betas[0], momentum_hess=args.betas[1],
-    #    prior_precision=args.prior_prec, dampening=args.dampening
-    # )
+    # optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
+    optimizer = IVON(
+        optimizer_grouped_parameters, lr=args.learning_rate, data_size=len(train_dataset), mc_samples=args.mc_samples,
+        momentum_grad=args.betas[0], momentum_hess=args.betas[1],
+        prior_precision=args.prior_prec, dampening=args.dampening
+    )
 
     # Scheduler and math around the number of training steps.
     overrode_max_train_steps = False
@@ -527,14 +527,31 @@ def main():
                     continue
             outputs = model(**batch)
 
-            loss = outputs.loss
+            # loss = outputs.loss
             # We keep track of the loss at each epoch
-            if args.with_tracking:
-                total_loss += loss.detach().float()
-            loss = loss / args.gradient_accumulation_steps
-            accelerator.backward(loss)
+            # if args.with_tracking:
+            #    total_loss += loss.detach().float()
+            # loss = loss / args.gradient_accumulation_steps
+            # accelerator.backward(loss)
+
+            def closure():
+                logits, loss = outputs.loss
+                # We keep track of the loss at each epoch
+                model.zero_grad(set_to_none=True)
+
+                if args.with_tracking:
+                    total_loss = 0
+                    total_loss += loss.detach().float()
+
+                loss = loss / args.gradient_accumulation_steps
+
+                accelerator.backward(loss)
+                torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_norm_clip)
+
+                return loss, logits
+
             if step % args.gradient_accumulation_steps == 0 or step == len(train_dataloader) - 1:
-                optimizer.step()
+                optimizer.step(closure)
                 lr_scheduler.step()
                 optimizer.zero_grad()
                 progress_bar.update(1)
