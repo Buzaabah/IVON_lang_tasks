@@ -39,7 +39,7 @@ source $HOME/miniconda3/bin/activate base
 export TASK_NAME=cola
 
 cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/code
-python run_flax_glue.py \
+python run_glue_no_trainer.py \
   --model_name_or_path bert-base-cased \
   --task_name ${TASK_NAME} \
   --max_seq_length 128 \
