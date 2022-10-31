@@ -33,7 +33,7 @@ proxy_clear
 proxy_gpu
 
 ### commented out: -pe OpenMP 28
-source $HOME/miniconda3/bin/activate base
+source $HOME/miniconda3/bin/activate Jax_env
 
 
 export TASK_NAME=wnli
@@ -44,7 +44,7 @@ python3 run_flax_glue.py \
   --task_name ${TASK_NAME} \
   --max_seq_length 128 \
   --learning_rate 1e-5 \
-  --num_train_epochs 10 \
+  --num_train_epochs 12 \
   --per_device_train_batch_size 4 \
   --eval_steps 100 \
   --output_dir ./$TASK_NAME/ \
