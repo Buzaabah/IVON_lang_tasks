@@ -36,7 +36,7 @@ proxy_gpu
 source $HOME/miniconda3/bin/activate Torch_env
 
 
-export TASK_NAME=mnli
+export TASK_NAME=cola
 
 cd ${HOME}/Transformers/IvonNER/IVON_lang_tasks/code
 python run_glue_no_trainer.py \
