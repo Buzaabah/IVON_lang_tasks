@@ -46,7 +46,6 @@ from transformers import (
 from transformers.utils import check_min_version, get_full_repo_name, send_example_telemetry
 from transformers.utils.versions import require_version
 
-#from ivon import IVON
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.24.0.dev0")
@@ -126,10 +125,6 @@ def parse_args():
         default=5e-5,
         help="Initial learning rate (after the potential warmup period) to use.",
     )
-    parser.add_argument("--mc_samples", default=1, type=int, help="Mc samples during training.")
-    parser.add_argument("--prior_prec", default=0.1, type=float, help="Prior prec.")
-    parser.add_argument("--dampening", default=0.1, type=float, help="dampening.")
-    parser.add_argument("--betas", default=(0.9, 0.95), type=float, help="betas.")
     parser.add_argument("--weight_decay", type=float, default=0.0, help="Weight decay to use.")
     parser.add_argument("--num_train_epochs", type=int, default=3, help="Total number of training epochs to perform.")
     parser.add_argument(
@@ -337,9 +332,9 @@ def main():
     # Some models have set the order of the labels to use, so let's make sure we do use it.
     label_to_id = None
     if (
-            model.config.label2id != PretrainedConfig(num_labels=num_labels).label2id
-            and args.task_name is not None
-            and not is_regression
+        model.config.label2id != PretrainedConfig(num_labels=num_labels).label2id
+        and args.task_name is not None
+        and not is_regression
     ):
         # Some have all caps in their config, some don't.
         label_name_to_id = {k.lower(): v for k, v in model.config.label2id.items()}
@@ -428,11 +423,6 @@ def main():
         },
     ]
     optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
-    # optimizer = IVON(
-    #    optimizer_grouped_parameters, lr=args.learning_rate, data_size=len(train_dataset), mc_samples=args.mc_samples,
-    #    momentum_grad=args.betas[0], momentum_hess=args.betas[1],
-    #    prior_precision=args.prior_prec, dampening=args.dampening
-    # )
 
     # Scheduler and math around the number of training steps.
     overrode_max_train_steps = False
@@ -526,7 +516,6 @@ def main():
                     completed_steps += 1
                     continue
             outputs = model(**batch)
-
             loss = outputs.loss
             # We keep track of the loss at each epoch
             if args.with_tracking:
@@ -542,7 +531,7 @@ def main():
 
             if isinstance(checkpointing_steps, int):
                 if completed_steps % checkpointing_steps == 0:
-                    output_dir = f"step_{completed_steps}"
+                    output_dir = f"step_{completed_steps }"
                     if args.output_dir is not None:
                         output_dir = os.path.join(args.output_dir, output_dir)
                     accelerator.save_state(output_dir)
