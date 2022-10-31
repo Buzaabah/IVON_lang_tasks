@@ -43,8 +43,8 @@ python run_flax_glue.py \
   --model_name_or_path bert-base-cased \
   --task_name ${TASK_NAME} \
   --max_seq_length 128 \
-  --learning_rate 1e-5 \
-  --num_train_epochs 10 \
+  --learning_rate 1e-4 \
+  --num_train_epochs 12 \
   --per_device_train_batch_size 4 \
   --eval_steps 100 \
   --output_dir ./$TASK_NAME/ \
