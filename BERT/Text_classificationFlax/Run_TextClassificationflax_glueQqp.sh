@@ -1,4 +1,5 @@
-#$ -jc gpu-container_g1
+#$ -jc gpu-container_g8
+#$ -cwd
 #$ -ac d=nvcr-tensorflow-2105-tf2-py3
 . /fefs/opt/dgx/env_set/nvcr-tensorflow-2105-tf2-py3.sh
 # Setting/unsetting proxy for internet access
