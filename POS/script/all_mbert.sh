@@ -51,7 +51,7 @@ do
 		export SAVE_STEPS=10000
 		export SEED=$j
 
-		CUDA_VISIBLE_DEVICES=1 python3 ../train_pos.py --data_dir ../data/${LANG}/ \
+		CUDA_VISIBLE_DEVICES=1 python ../train_pos.py --data_dir ../data/${LANG}/ \
 		--model_type bert \
 		--model_name_or_path $BERT_MODEL \
 		--output_dir $OUTPUT_DIR \
