@@ -36,7 +36,7 @@ proxy_gpu
 ### commented out: -pe OpenMP 28
 source $HOME/miniconda3/bin/activate Torch_env
 
-for LANG in bam bbj ewe fon hau ibo kin lug luo nya pcm sna swa twi wol xho yor zul
+for LANG in fon hau ibo lug luo nya pcm sna swa twi wol xho yor zul
 do
 	for j in 1 2 3 4 5
 	do
@@ -50,7 +50,7 @@ do
 		export SAVE_STEPS=10000
 		export SEED=$j
 
-		CUDA_VISIBLE_DEVICES=3 python ../train_pos.py --data_dir ../data/${LANG}/ \
+		CUDA_VISIBLE_DEVICES=2 python ../train_pos.py --data_dir ../data/${LANG}/ \
 		--model_type bert \
 		--model_name_or_path $BERT_MODEL \
 		--output_dir $OUTPUT_DIR \
